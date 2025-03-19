@@ -31,14 +31,16 @@ export default function RootLayout() {
   return (
     <GluestackUIProvider mode='light'>
 
-       <ThemeProvider value={DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+      <ThemeProvider value={DefaultTheme}>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+          <Stack.Screen name="post" options={{ headerShown: false, presentation: 'modal' }} />
+
+        </Stack>
+        <StatusBar style="auto" />
+      </ThemeProvider>
     </GluestackUIProvider>
-   
+
   );
 }
